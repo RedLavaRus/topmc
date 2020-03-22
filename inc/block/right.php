@@ -21,19 +21,32 @@ $("#show_online").html(data);
 					ГОЛОСУЙ И ПОЛУЧАЙ ПОДАРКИ!
 				</div>
 				<div class="server_box">
+				<a href="https://hotmc.ru/vote-188390" target="_blank"	>
 					<div class="button_voice">
-					TOPMC
+						HOTMC
 					</div>
+				</a>
 				</div>
 				<div class="server_box">
-				<div class="button_voice">
-					NJG4NJG
-					</div>
+				<a href="https://topcraft.ru/servers/10251/" target="_blank"	>
+					<div class="button_voice">
+						TOPCRAFT
+						</div>
+				</a>
 				</div>
 				<div class="server_box">
+				<a href="https://mctop.su/servers/5964/" target="_blank"	>
 				<div class="button_voice">
-					TOP5TOP
+					MCTOP
 					</div>
+			</a>
+				</div>
+				<div class="server_box">
+				<a href="http://mcrate.su/project/8692" target="_blank"	>
+				<div class="button_voice">
+					MCRATE
+					</div>
+			</a>
 				</div>
 
 

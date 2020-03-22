@@ -598,3 +598,150 @@ a{
 	width: 340px;
 	margin: 20px auto;
 }
+.donat_blokc_main{
+	width: 750px;
+}
+.donat_box{
+	width: 225px;
+	margin: 11px;
+	float: left;
+	height: 300px;
+	background-color: #222;
+	border-radius:5px 5px  3px 3px ;
+	border: 1px solid #151515;
+}
+.donat_box_head{
+	width: 100%;
+	height: 20px;
+	text-align: center;
+	border-radius: 5px 5px 0 0 ;
+	padding: 5px 0;
+}
+.donat_ava_byuX{
+	width: 160px;
+	height: 160px;
+	margin: 20px 30px;
+}
+.donat_but_buy{
+	width: 81px;
+	float: left;
+	background-color: #074a52;
+	text-align: center;
+	padding: 10px 5px;
+	border: 2px solid  #0b89a0;
+	border-radius:  5px ;
+	margin: 15px 0 0 10px;
+	color: rgb(177, 214, 245);
+}
+.donat_but_info{
+	width: 80px;
+	float: right;
+	background-color: #074a52;
+	border: 2px solid #0b89a0;
+	text-align: center;
+	padding: 10px 5px;
+	border-radius:  5px;
+	margin: 15px 10px 0 0;
+	color: rgb(177, 214, 245);
+}
+
+#donat_vip_box{
+	background-color: #fceea3;
+}
+#donat_vip_head{
+	background-color: #ffd700;
+	border-bottom: 1px solid #c2a400;
+}
+
+#donat_prem_box{
+	background-color: #67e46f;
+}
+#donat_prem_head{
+	background-color: #008209;
+	border-bottom: 1px solid #016608;
+}
+
+#donat_lord_box{
+	background-color: #74a1d1;
+}
+#donat_lord_head{
+	background-color: #4188d2;
+	border-bottom: 1px solid #0a6ad1;
+}
+
+#donat_king_box{
+	background-color: #b964d4;
+}
+#donat_king_head{
+	background-color: #8106a9;
+	border-bottom: 1px solid #4c0364;
+}
+
+#donat_mic_box{
+	background-color: #9ae9e6;
+}
+#donat_mic_head{
+	background-color: #8ccdc9;
+	border-bottom: 1px solid #29d3c8;
+}
+.shop_vindows{
+	position: fixed;
+	width:800px;
+	min-height: 80vh;
+	background:url("/thems/img/lcf90.png");
+	left: calc(50% - 400px);
+	top: 10vh;
+	z-index: 5;
+	border: 2px solid #151515;
+	border-radius: 5px 5px 0 0px ;
+	display:none;
+}
+.head_shop_by_or_info{
+	width: 100%;
+	height: 30px;
+	background-color: rgb(21, 26, 48);
+	color: #eee;
+	font-size:24px;
+	padding: 3px 0;
+	text-align: center;
+}
+.close_windows_shop{
+	width:28px;
+	float: right;
+	margin:0 5px 0 0;
+}
+.donat_select_server_box{
+
+	border: 2px solid #151515;
+	border-radius: 5px 5px 0 0px ;
+	margin:5px 10px;
+	width: calc(100% - 24px);
+
+}
+.donat_select_server_head{
+	padding: 10px 15px;
+	color: #eee;
+	font-size:18px;
+	float:left;
+}
+.donat_select_server_item{
+	padding: 10px 25px;
+	color: #eee;
+	font-size:18px;
+	float:left;
+	background-color: #151515;
+}
+.donat_select_server_item:hover{
+	padding: 10px 25px;
+	color: #eee;
+	font-size:18px;
+	float:left;
+	background-color: #222;
+}
+.donat_select_server_item1{
+	padding: 10px 25px;
+	color: #eee;
+	font-size:18px;
+	float:left;
+	background-color: #252525;
+}

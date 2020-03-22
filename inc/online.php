@@ -34,7 +34,7 @@ echo "<div class='servers'>
 					<div class="server_name">
           <div class="server_name_h1">		<?php echo $Servers_config[$i][0]; ?>   </div>
 					<div class="server_name_ip">			<?php echo $Servers_config[$i][1]; ?>  </div> 
-          <div class="server_name_tag"> ОТКРЫТИЕ 20.03.2018 </div> 
+          <div class="server_name_tag"> ОТКРЫТИЕ 20.03.2020 </div> 
 						
 
 					</div>	

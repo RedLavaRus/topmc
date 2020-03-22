@@ -21,7 +21,7 @@ require_once $_SERVER['DOCUMENT_ROOT']."/inc/block/header.php";
 require_once $_SERVER['DOCUMENT_ROOT']."/inc/block/headmenu.php";
 ?>		
 		<div class="main_box_2">
-		<?php	require_once $_SERVER['DOCUMENT_ROOT']."/inc/main/ivent.php"; ?>	
+		<?php	require_once $_SERVER['DOCUMENT_ROOT']."/inc/main/support.php"; ?>	
 			<div class="main_box_lz2">
 
 		<?php	require_once $_SERVER['DOCUMENT_ROOT']."/inc/block/right.php"; ?>

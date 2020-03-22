@@ -3,7 +3,8 @@
 
 //настройки серверов
 $Servers_config = array(
-  array('VANILA','s1.topmc.site','25565','status','0')
+	//array('НАЗВАНИЕ','ИП','ПОРТ','СТАТУС','ОНЛАИН',"НАКРУТКА")
+  array('VANILA','s1.topmc.site','25565','status','0','3')
 );
 $server_coll =2;
       $on_ser0=0;
@@ -19,7 +20,7 @@ $server_coll =2;
       $Server_full = new MinecraftStatus($Servers_config[$i][1], $Servers_config[$i][2]); 
       $Servers_config[$i][3] = $Server_full->Online; 
       if($Server_full->Online){$Servers_config[$i][3] = "online"; }else{$Servers_config[$i][3] = "offline";}
-      $Servers_config[$i][4]=$Server_full->CurPlayers;
+      $Servers_config[$i][4]=$Server_full->CurPlayers + $Servers_config[$i][5];
 
       $slovo_on = 'on_ser'.$i;
       $$slovo_on = $Servers_config[$i][4];
