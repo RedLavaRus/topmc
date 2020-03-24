@@ -434,6 +434,13 @@ Class Ivent
 		}
 	}
 }
+Class Shop
+{
+	public function test_windows()
+	{
+		return "Ошибка: Укажите пароль!";
+	}
+}
 /*
 
 $login = "redLavaz";
