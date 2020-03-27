@@ -5,7 +5,7 @@
 					<div class="donat_select_server_box">
 							<div class="donat_select_server_head">СЕРВЕР:</div>
 							<a id="don_vanila"><div class="donat_select_server_item1">VANILA</div></a>
-							<a id="don_tehno"><div class="donat_select_server_item">TEHNO</div></a>
+							<?php //<a id="don_tehno"><div class="donat_select_server_item">TEHNO</div></a>?>
 					<div class="clear"></div>
 					</div>
 					<div class="clear"></div>

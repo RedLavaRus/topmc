@@ -4,7 +4,7 @@
 //настройки серверов
 $Servers_config = array(
 	//array('НАЗВАНИЕ','ИП','ПОРТ','СТАТУС','ОНЛАИН',"НАКРУТКА")
-  array('VANILA','s1.topmc.site','25565','status','0','3')
+  array('VANILA','s1.topmc.site','25565','status','0','0')
 );
 $server_coll =2;
       $on_ser0=0;

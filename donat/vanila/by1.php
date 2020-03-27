@@ -33,7 +33,7 @@
 					100
 					<img src="/thems/img/mlp.png">
 				</div>
-				<div class="donat_but_by1">Купить</div>
+				<a id="sb4"><div class="donat_but_by1">Купить</div></a>
 				<div class="donat_but_add">Заработать</div>
 			</div>
 		</div>
@@ -47,7 +47,7 @@
 					125
 					<img src="/thems/img/mgd.png">
 				</div>
-				<div class="donat_but_by1">Купить</div>
+				<a id="sb2"><div class="donat_but_by1">Купить</div></a>
 				<div class="donat_but_add">Пополнить</div>
 			</div>
 			<div class="shop_text_blokc_items_sr1">
@@ -56,7 +56,7 @@
 					250
 					<img src="/thems/img/mlp.png">
 				</div>
-				<div class="donat_but_by1">Купить</div>
+				<a id="sb5"><div class="donat_but_by1">Купить</div></a>
 				<div class="donat_but_add">Заработать</div>
 			</div>
 		</div>
@@ -70,7 +70,7 @@
 					450
 					<img src="/thems/img/mgd.png">
 				</div>
-				<div class="donat_but_by1">Купить</div>
+				<a id="sb3"><div class="donat_but_by1">Купить</div></a>
 				<div class="donat_but_add">Пополнить</div>
 			</div>
 			
@@ -88,7 +88,7 @@
 					100
 					<img src="/thems/img/mgd.png">
 				</div>
-				<div class="donat_but_by1">Купить</div>
+				<a id="sb6"><div class="donat_but_by1">Купить</div></a>
 				<div class="donat_but_add">Пополнить</div>
 			</div>
 			<div class="shop_text_blokc_items_sr1">
@@ -97,7 +97,7 @@
 					200
 					<img src="/thems/img/mlp.png">
 				</div>
-				<div class="donat_but_by1">Купить</div>
+				<a id="sb9"><div class="donat_but_by1">Купить</div></a>
 				<div class="donat_but_add">Заработать</div>
 			</div>
 		</div>
@@ -111,7 +111,7 @@
 					250
 					<img src="/thems/img/mgd.png">
 				</div>
-				<div class="donat_but_by1">Купить</div>
+				<a id="sb7"><div class="donat_but_by1">Купить</div></a>
 				<div class="donat_but_add">Пополнить</div>
 			</div>
 			<div class="shop_text_blokc_items_sr1">
@@ -120,7 +120,7 @@
 					500
 					<img src="/thems/img/mlp.png">
 				</div>
-				<div class="donat_but_by1">Купить</div>
+				<a id="sb10"><div class="donat_but_by1">Купить</div></a>
 				<div class="donat_but_add">Заработать</div>
 			</div>
 		</div>
@@ -134,7 +134,7 @@
 					650
 					<img src="/thems/img/mgd.png">
 				</div>
-				<div class="donat_but_by1">Купить</div>
+				<a id="sb8"><div class="donat_but_by1">Купить</div></a>
 				<div class="donat_but_add">Пополнить</div>
 			</div>
 			
@@ -152,7 +152,7 @@
 					200
 					<img src="/thems/img/mgd.png">
 				</div>
-				<div class="donat_but_by1">Купить</div>
+				<a id="sb11"><div class="donat_but_by1">Купить</div></a>
 				<div class="donat_but_add">Пополнить</div>
 			</div>
 			<div class="shop_text_blokc_items_sr1">
@@ -161,7 +161,7 @@
 					400
 					<img src="/thems/img/mlp.png">
 				</div>
-				<div class="donat_but_by1">Купить</div>
+				<a id="sb14"><div class="donat_but_by1">Купить</div></a>
 				<div class="donat_but_add">Заработать</div>
 			</div>
 		</div>
@@ -175,7 +175,7 @@
 					500
 					<img src="/thems/img/mgd.png">
 				</div>
-				<div class="donat_but_by1">Купить</div>
+				<a id="sb12"><div class="donat_but_by1">Купить</div></a>
 				<div class="donat_but_add">Пополнить</div>
 			</div>
 			<div class="shop_text_blokc_items_sr1">
@@ -184,7 +184,7 @@
 					1000
 					<img src="/thems/img/mlp.png">
 				</div>
-				<div class="donat_but_by1">Купить</div>
+				<a id="sb15"><div class="donat_but_by1">Купить</div></a>
 				<div class="donat_but_add">Заработать</div>
 			</div>
 		</div>
@@ -198,7 +198,7 @@
 					1250
 					<img src="/thems/img/mgd.png">
 				</div>
-				<div class="donat_but_by1">Купить</div>
+				<a id="sb13"><div class="donat_but_by1">Купить</div></a>
 				<div class="donat_but_add">Пополнить</div>
 			</div>
 			
@@ -216,7 +216,7 @@
 					400
 					<img src="/thems/img/mgd.png">
 				</div>
-				<div class="donat_but_by1">Купить</div>
+				<a id="sb16"><div class="donat_but_by1">Купить</div></a>
 				<div class="donat_but_add">Пополнить</div>
 			</div>
 			<div class="shop_text_blokc_items_sr1">
@@ -225,7 +225,7 @@
 					800
 					<img src="/thems/img/mlp.png">
 				</div>
-				<div class="donat_but_by1">Купить</div>
+				<a id="sb19"><div class="donat_but_by1">Купить</div></a>
 				<div class="donat_but_add">Заработать</div>
 			</div>
 		</div>
@@ -239,7 +239,7 @@
 					1000
 					<img src="/thems/img/mgd.png">
 				</div>
-				<div class="donat_but_by1">Купить</div>
+				<a id="sb17"><div class="donat_but_by1">Купить</div></a>
 				<div class="donat_but_add">Пополнить</div>
 			</div>
 			<div class="shop_text_blokc_items_sr1">
@@ -248,7 +248,7 @@
 					2000
 					<img src="/thems/img/mlp.png">
 				</div>
-				<div class="donat_but_by1">Купить</div>
+				<a id="sb20"><div class="donat_but_by1">Купить</div></a>
 				<div class="donat_but_add">Заработать</div>
 			</div>
 		</div>
@@ -262,7 +262,7 @@
 					2500
 					<img src="/thems/img/mgd.png">
 				</div>
-				<div class="donat_but_by1">Купить</div>
+				<a id="sb18"><div class="donat_but_by1">Купить</div></a>
 				<div class="donat_but_add">Пополнить</div>
 			</div>
 			
@@ -280,7 +280,7 @@
 					1000
 					<img src="/thems/img/mgd.png">
 				</div>
-				<div class="donat_but_by1">Купить</div>
+				<a id="sb21"><div class="donat_but_by1">Купить</div></a>
 				<div class="donat_but_add">Пополнить</div>
 			</div>
 			<div class="shop_text_blokc_items_sr1">
@@ -289,7 +289,7 @@
 					2000
 					<img src="/thems/img/mlp.png">
 				</div>
-				<div class="donat_but_by1">Купить</div>
+				<a id="sb24"><div class="donat_but_by1">Купить</div></a>
 				<div class="donat_but_add">Заработать</div>
 			</div>
 		</div>
@@ -303,7 +303,7 @@
 					2500
 					<img src="/thems/img/mgd.png">
 				</div>
-				<div class="donat_but_by1">Купить</div>
+				<a id="sb22"><div class="donat_but_by1">Купить</div></a>
 				<div class="donat_but_add">Пополнить</div>
 			</div>
 			<div class="shop_text_blokc_items_sr1">
@@ -312,7 +312,7 @@
 					5000
 					<img src="/thems/img/mlp.png">
 				</div>
-				<div class="donat_but_by1">Купить</div>
+				<a id="sb25"><div class="donat_but_by1">Купить</div></a>
 				<div class="donat_but_add">Заработать</div>
 			</div>
 		</div>
@@ -326,7 +326,7 @@
 					7000
 					<img src="/thems/img/mgd.png">
 				</div>
-				<div class="donat_but_by1">Купить</div>
+				<a id="sb23"><div class="donat_but_by1">Купить</div></a>
 				<div class="donat_but_add">Пополнить</div>
 			</div>
 			
@@ -493,9 +493,251 @@
 	</div>
 
 	<script>
-		$('#sb1').click(function(){  
+						$('#sb1').click(function(){  
                 $.ajax({  
-                    url: "/donat/inviter.php?info=5",
+                    url: "/donat/inviter.php?server=vanila&type=privelegiya&atribut=1",
+                    cache: false,  
+                    success: function(html){  
+                        $("#msg_wie_don1").html(html);  
+                    }  
+                });  
+
+            });
+						$('#sb2').click(function(){  
+                $.ajax({  
+                    url: "/donat/inviter.php?server=vanila&type=privelegiya&atribut=2",
+                    cache: false,  
+                    success: function(html){  
+                        $("#msg_wie_don1").html(html);  
+                    }  
+                });  
+
+            });
+						$('#sb3').click(function(){  
+                $.ajax({  
+                    url: "/donat/inviter.php?server=vanila&type=privelegiya&atribut=3",
+                    cache: false,  
+                    success: function(html){  
+                        $("#msg_wie_don1").html(html);  
+                    }  
+                });  
+
+            });
+						$('#sb4').click(function(){  
+                $.ajax({  
+                    url: "/donat/inviter.php?server=vanila&type=privelegiya&atribut=4",
+                    cache: false,  
+                    success: function(html){  
+                        $("#msg_wie_don1").html(html);  
+                    }  
+                });  
+
+            });
+						$('#sb5').click(function(){  
+                $.ajax({  
+                    url: "/donat/inviter.php?server=vanila&type=privelegiya&atribut=5",
+                    cache: false,  
+                    success: function(html){  
+                        $("#msg_wie_don1").html(html);  
+                    }  
+                });  
+
+            });
+
+
+						$('#sb6').click(function(){  
+                $.ajax({  
+                    url: "/donat/inviter.php?server=vanila&type=privelegiya&atribut=6",
+                    cache: false,  
+                    success: function(html){  
+                        $("#msg_wie_don1").html(html);  
+                    }  
+                });  
+
+            });
+						$('#sb7').click(function(){  
+                $.ajax({  
+                    url: "/donat/inviter.php?server=vanila&type=privelegiya&atribut=7",
+                    cache: false,  
+                    success: function(html){  
+                        $("#msg_wie_don1").html(html);  
+                    }  
+                });  
+
+            });
+						$('#sb8').click(function(){  
+                $.ajax({  
+                    url: "/donat/inviter.php?server=vanila&type=privelegiya&atribut=8",
+                    cache: false,  
+                    success: function(html){  
+                        $("#msg_wie_don1").html(html);  
+                    }  
+                });  
+
+            });
+						$('#sb9').click(function(){  
+                $.ajax({  
+                    url: "/donat/inviter.php?server=vanila&type=privelegiya&atribut=9",
+                    cache: false,  
+                    success: function(html){  
+                        $("#msg_wie_don1").html(html);  
+                    }  
+                });  
+
+            });
+						$('#sb10').click(function(){  
+                $.ajax({  
+                    url: "/donat/inviter.php?server=vanila&type=privelegiya&atribut=10",
+                    cache: false,  
+                    success: function(html){  
+                        $("#msg_wie_don1").html(html);  
+                    }  
+                });  
+
+            });
+						$('#sb11').click(function(){  
+                $.ajax({  
+                    url: "/donat/inviter.php?server=vanila&type=privelegiya&atribut=11",
+                    cache: false,  
+                    success: function(html){  
+                        $("#msg_wie_don1").html(html);  
+                    }  
+                });  
+
+            });
+						$('#sb12').click(function(){  
+                $.ajax({  
+                    url: "/donat/inviter.php?server=vanila&type=privelegiya&atribut=12",
+                    cache: false,  
+                    success: function(html){  
+                        $("#msg_wie_don1").html(html);  
+                    }  
+                });  
+
+            });
+						$('#sb13').click(function(){  
+                $.ajax({  
+                    url: "/donat/inviter.php?server=vanila&type=privelegiya&atribut=13",
+                    cache: false,  
+                    success: function(html){  
+                        $("#msg_wie_don1").html(html);  
+                    }  
+                });  
+
+            });
+						$('#sb14').click(function(){  
+                $.ajax({  
+                    url: "/donat/inviter.php?server=vanila&type=privelegiya&atribut=14",
+                    cache: false,  
+                    success: function(html){  
+                        $("#msg_wie_don1").html(html);  
+                    }  
+                });  
+
+            });
+						$('#sb15').click(function(){  
+                $.ajax({  
+                    url: "/donat/inviter.php?server=vanila&type=privelegiya&atribut=15",
+                    cache: false,  
+                    success: function(html){  
+                        $("#msg_wie_don1").html(html);  
+                    }  
+                });  
+
+            });
+						$('#sb16').click(function(){  
+                $.ajax({  
+                    url: "/donat/inviter.php?server=vanila&type=privelegiya&atribut=16",
+                    cache: false,  
+                    success: function(html){  
+                        $("#msg_wie_don1").html(html);  
+                    }  
+                });  
+
+            });
+						$('#sb17').click(function(){  
+                $.ajax({  
+                    url: "/donat/inviter.php?server=vanila&type=privelegiya&atribut=17",
+                    cache: false,  
+                    success: function(html){  
+                        $("#msg_wie_don1").html(html);  
+                    }  
+                });  
+
+            });
+						$('#sb18').click(function(){  
+                $.ajax({  
+                    url: "/donat/inviter.php?server=vanila&type=privelegiya&atribut=18",
+                    cache: false,  
+                    success: function(html){  
+                        $("#msg_wie_don1").html(html);  
+                    }  
+                });  
+
+            });
+						$('#sb19').click(function(){  
+                $.ajax({  
+                    url: "/donat/inviter.php?server=vanila&type=privelegiya&atribut=19",
+                    cache: false,  
+                    success: function(html){  
+                        $("#msg_wie_don1").html(html);  
+                    }  
+                });  
+
+            });
+						$('#sb20').click(function(){  
+                $.ajax({  
+                    url: "/donat/inviter.php?server=vanila&type=privelegiya&atribut=20",
+                    cache: false,  
+                    success: function(html){  
+                        $("#msg_wie_don1").html(html);  
+                    }  
+                });  
+
+            });
+						$('#sb21').click(function(){  
+                $.ajax({  
+                    url: "/donat/inviter.php?server=vanila&type=privelegiya&atribut=21",
+                    cache: false,  
+                    success: function(html){  
+                        $("#msg_wie_don1").html(html);  
+                    }  
+                });  
+
+            });
+						$('#sb22').click(function(){  
+                $.ajax({  
+                    url: "/donat/inviter.php?server=vanila&type=privelegiya&atribut=22",
+                    cache: false,  
+                    success: function(html){  
+                        $("#msg_wie_don1").html(html);  
+                    }  
+                });  
+
+            });
+						$('#sb23').click(function(){  
+                $.ajax({  
+                    url: "/donat/inviter.php?server=vanila&type=privelegiya&atribut=23",
+                    cache: false,  
+                    success: function(html){  
+                        $("#msg_wie_don1").html(html);  
+                    }  
+                });  
+
+            });
+						$('#sb24').click(function(){  
+                $.ajax({  
+                    url: "/donat/inviter.php?server=vanila&type=privelegiya&atribut=24",
+                    cache: false,  
+                    success: function(html){  
+                        $("#msg_wie_don1").html(html);  
+                    }  
+                });  
+
+            });
+						$('#sb25').click(function(){  
+                $.ajax({  
+                    url: "/donat/inviter.php?server=vanila&type=privelegiya&atribut=25",
                     cache: false,  
                     success: function(html){  
                         $("#msg_wie_don1").html(html);  
