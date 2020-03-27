@@ -651,6 +651,38 @@ Class Shop
 
 	}
 }
+
+Class Lc
+{
+	public function name($pdo, $id)
+	{
+		$sth = $pdo->prepare('Select `username`  FROM `authme` WHERE id = ?');
+		$sth->execute(array("$id"));
+		$array = $sth->fetch(PDO::FETCH_ASSOC);
+		return $array['username'];
+	}	
+	public function realname($pdo, $id)
+	{
+		$sth = $pdo->prepare('Select `realname`  FROM `authme` WHERE id = ?');
+		$sth->execute(array("$id"));
+		$array = $sth->fetch(PDO::FETCH_ASSOC);
+		return $array['realname'];
+	}
+	public function status($pdo, $id)
+	{
+		$sth = $pdo->prepare('Select `isLogged`  FROM `authme` WHERE id = ?');
+		$sth->execute(array("$id"));
+		$array = $sth->fetch(PDO::FETCH_ASSOC);
+		if($array['isLogged'] == 1) 
+		{
+			return "В сети";
+		}
+		else 
+		{
+			return "Не сети";
+		}
+	}
+}
 /*
 
 $login = "redLavaz";

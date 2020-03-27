@@ -1,6 +1,7 @@
 <div class="lc_top_mid_bar">
         <?php
         //$bal = new Balance;
+        if($_SESSION["id"] >= 1){
         $balance_fun = new Balance;
         
       
@@ -12,7 +13,15 @@
         <div class="lc_element_top_balans_bar">GOLD <div class="lc_summa_ballans"><img src="/thems/img/mgd.png" alt="GOLD"><?php echo $balance['gold']; ?> <div class="lc_summa_ballans_plus">+</div></div></div>
         <div class="lc_element_top_balans_bar">SILVER <div class="lc_summa_ballans"><img src="/thems/img/msv.png" alt="SILVER"><?php echo $balance['silver']; ?><div class="lc_summa_ballans_plus">+</div></div></div>
         <div class="lc_element_top_balans_bar">LIKE POINT <div class="lc_summa_ballans"><img src="/thems/img/mlp.png" alt="LIKE POINT"><?php echo $balance['likepoint']; ?><div class="lc_summa_ballans_plus">+</div></div></div>
-        
+        <?php
+        }
+        else{
+            ?>
+            <h3 style="color:#fff;">Авторизуйтесь или зарегестрируйтесь!</h3>
+            <?php
+
+        }
+        ?>
     
         
     </div>

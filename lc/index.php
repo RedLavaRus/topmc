@@ -1,27 +1,19 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT']."/core/core.php";
-if(!isset($_SESSION["id"]))
+
+if((!isset($_GET['id'])) && ($_SESSION['id'] >= 1))
 {
-    if(isset($_GET["id"]))
-    {
-        $page_id = $_GET["id"]; 
-    }
-    else
-    {
-        $page_id ="error404";
-    }
+    $up_id = $_SESSION['id'];
 }
-else
+if(isset($_GET['id']))
 {
-    if(isset($_GET["id"]))
-    {
-        $page_id = $_GET["id"]; 
-    }
-    else
-    {
-        $page_id =$_SESSION["id"];
-    }
+    $up_id = $_GET['id'];
 }
+if((!isset($_GET['id'])) && (!isset($_SESSION['id']) ))
+{
+    $up_id = 0;
+}
+ $lc = new Lc;
 ?>
 
 <!DOCTYPE html>
