@@ -123,6 +123,7 @@
 		
 		
 		echo "<pre>";
+		if ($InfoValue['online'] )
 		echo $InfoValue['online'];
 
 		echo "</pre>";
