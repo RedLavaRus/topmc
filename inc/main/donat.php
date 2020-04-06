@@ -4,14 +4,15 @@
 					<h3>Донат</h3>
 					<div class="donat_select_server_box">
 							<div class="donat_select_server_head">СЕРВЕР:</div>
-							<a id="don_vanila"><div class="donat_select_server_item1">VANILA</div></a>
+                            <a id="don_vanila"><div class="donat_select_server_item1">VANILA</div></a>
+                            <a id="don_tehnowar"><div class="donat_select_server_item1">TEHNO WAR</div></a>
 							<?php //<a id="don_tehno"><div class="donat_select_server_item">TEHNO</div></a>?>
 					<div class="clear"></div>
 					</div>
 					<div class="clear"></div>
 					<div class="donat_blokc_main" id="showshop">
           <?php require_once $_SERVER['DOCUMENT_ROOT']."/donat/vanila/main.php"; ?>
-          <?php //require_once $_SERVER['DOCUMENT_ROOT']."/donat/tehno/main.php"; ?>
+          <?php //require_once $_SERVER['DOCUMENT_ROOT']."/donat/tehnowar/main.php"; ?>
 					</div>
 				
 				</div>
@@ -32,9 +33,9 @@
                 });  
             });  
               
-            $('#don_tehno').click(function(){  
+            $('#don_tehnowar').click(function(){  
                 $.ajax({  
-                    url: "/donat/tehno/main.php",
+                    url: "/donat/tehnowar/main.php",
                     cache: false,  
                     success: function(html){  
                         $("#showshop").html(html);  
@@ -137,6 +138,88 @@
             $('#shop_act_vanila_info_5').click(function(){  
                 $.ajax({  
                     url: "/donat/vanila/by1.php?info=5",
+                    cache: false,  
+                    success: function(html){  
+                        $("#msg_wie_don").html(html);  
+                    }  
+                });  
+
+            });  
+
+
+            $('#shop_act_tehnowar_info_1').click(function(){  
+                $.ajax({  
+                    url: "/donat/tehnowar/by1.php?info=5",
+                    cache: false,  
+                    success: function(html){  
+                        $("#msg_wie_don").html(html);  
+                    }  
+                });  
+
+            });  
+            $('#shop_act_tehnowar_info_2').click(function(){  
+                $.ajax({  
+                    url: "/donat/tehnowar/by1.php?info=2",
+                    cache: false,  
+                    success: function(html){  
+                        $("#msg_wie_don").html(html);  
+                    }  
+                });  
+
+            });  
+            $('#shop_act_tehnowar_info_3').click(function(){  
+                $.ajax({  
+                    url: "/donat/tehnowar/by1.php?info=3",
+                    cache: false,  
+                    success: function(html){  
+                        $("#msg_wie_don").html(html);  
+                    }  
+                });  
+
+            });  
+            $('#shop_act_tehnowar_info_4').click(function(){  
+                $.ajax({  
+                    url: "/donat/tehnowar/by1.php?info=4",
+                    cache: false,  
+                    success: function(html){  
+                        $("#msg_wie_don").html(html);  
+                    }  
+                });  
+
+            });  
+            $('#shop_act_tehnowar_by_1').click(function(){  
+                $.ajax({  
+                    url: "/donat/tehnowar/by1.php?pr=5",
+                    cache: false,  
+                    success: function(html){  
+                        $("#msg_wie_don").html(html);  
+                    }  
+                });  
+
+            });  
+            $('#shop_act_tehnowar_by_2').click(function(){  
+                $.ajax({  
+                    url: "/donat/tehnowar/by1.php?pr=2",
+                    cache: false,  
+                    success: function(html){  
+                        $("#msg_wie_don").html(html);  
+                    }  
+                });  
+
+            });  
+            $('#shop_act_tehnowar_by_3').click(function(){  
+                $.ajax({  
+                    url: "/donat/tehnowar/by1.php?pr=3",
+                    cache: false,  
+                    success: function(html){  
+                        $("#msg_wie_don").html(html);  
+                    }  
+                });  
+
+            });  
+            $('#shop_act_tehnowar_by_4').click(function(){  
+                $.ajax({  
+                    url: "/donat/tehnowar/by1.php?pr=4",
                     cache: false,  
                     success: function(html){  
                         $("#msg_wie_don").html(html);  

@@ -751,21 +751,32 @@ a{
 	color: #eee;
 	font-size:18px;
 	float:left;
-	background-color: #151515;
+
+	border:2px solid #0b89a0;
+	border-radius: 5px;
+	background-color: #041b1d;
 }
 .donat_select_server_item:hover{
 	padding: 10px 25px;
 	color: #eee;
 	font-size:18px;
 	float:left;
-	background-color: #222;
+
+	border:2px solid #0b89a0;
+	border-radius: 5px;
+	background-color: #083438;
+	margin: 0 0 0 10px;
 }
 .donat_select_server_item1{
 	padding: 10px 25px;
 	color: #eee;
 	font-size:18px;
 	float:left;
-	background-color: #252525;
+
+	border:2px solid #0b89a0;
+	border-radius: 5px;
+	background-color: #041b1d;
+	margin: 0 0 0 10px;
 }
 .shop_item_pos_xr{
 	width: 780px;
@@ -845,4 +856,89 @@ a{
 	color:#eee;
 	text-align: center;
 	padding: 30px 20px;
+}
+.onliner_v2_main{
+	width: 340px;
+}
+.onliner_v2_main_l1{
+	width: 340px;
+	color:#eee;
+	font-size:18px;
+}
+.onliner_v2_main_l1_n1{
+	float: left;
+	margin:10px;
+	padding: 0 0 0 20px;
+}
+.onliner_v2_main_l1_n2{
+	float: left;
+	margin: 10px 10px 10px 20px;
+}
+.onliner_v2_main_l1_n3{
+	float: right;
+	margin:10px;
+}
+.onliner_v2_main_bar{
+	background-color: #074a52;
+	width: 300px;
+	height: 32px;
+	border:2px solid #0b89a0;
+	margin:-5px 20px 5px 25px;
+	border-radius: 5px;
+}
+
+.onliner_v2_main_barin{
+	background-image: url("/img/bar.png");
+	width: 300px;
+	height: 32px;
+	border-radius: 5px 0px 0 5px;
+	
+}
+.onliner_v2_main_l3{
+	width: 300px;
+	color:#eee;
+	font-size:18px;
+	margin: 0 0 0 28px;
+}
+.onliner_icos_st_s{
+	width: 32px;
+	height: 32px;
+	float: left;
+	margin: -5px 0 0 0;
+}
+.onliner_icos_st_s1{
+	width: 32px;
+	height: 32px;
+	float: left;
+	margin: -5px 5px 0 0;
+}
+.onliner_v2_main_barin_online{
+	width: 300px;
+	height: 20px;
+	position: absolute;
+	text-align: center;
+	padding:6px 0 0 0;
+	color:#eee;
+}
+.download_file_box_one_blo{
+	float: left;
+	padding: 28px;
+	margin: 21px;
+	border:2px solid #0b89a0;
+	border-radius: 5px;
+	background-color: #041b1d;
+	height: 340px;
+}
+.download_file_box_one_text{
+	text-align: center;
+	color: #eee;
+	margin: 5px;
+}
+.warningsss{
+	border:2px solid #a00b0b;
+	border-radius: 5px;
+	background-color: #1d0404;
+	padding: 10px;
+	margin: 10px 22px;
+	color: red;
 }

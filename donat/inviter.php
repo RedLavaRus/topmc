@@ -1697,6 +1697,1357 @@ if(((isset($_GET['server']))and(isset($_GET['type']))) and (isset($_GET['atribut
 
     }
   }
+  elseif($_GET['server'] == "tehnopvp")
+  {
+    if($_GET['type']== "privelegiya")
+    {
+      
+      //privelegiya
+      if($_GET['atribut'] == 1)
+      {
+        $atr_id_by = $_GET['atribut'];
+        $namepred= "Статус МЕХАНИК на 30 дней";
+        $command_shop = $_GET['atribut'];
+        $sth_balance = $pdo->prepare('Select * FROM `shop_items` WHERE  id= ?');
+		    $sth_balance->execute(array("$atr_id_by"));
+        $array_balans_trade = $sth_balance->fetch(PDO::FETCH_ASSOC);
+        $gpr=$array_balans_trade['priv'];
+        if( $array_balans_trade['valut'] == "GD")
+        {
+          if($array_balans_trade['prise']  <= $user_GD)
+          {
+            $user_GD = $user_GD - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `gold` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_GD","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно денег!<br> >Пополнить баланс<";
+          }
+        }
+        if( $array_balans_trade['valut'] == "LP")
+        {
+          if($array_balans_trade['prise']  <= $user_LP)
+          {
+            $user_LP = $user_LP - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `lp` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_LP","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно МОНЕТ УДАЧИ!<br> >ЗАРАБОТАЙТЕ!<";
+          }
+        }
+      }
+      if($_GET['atribut'] == 2)
+      {
+        $atr_id_by = $_GET['atribut'];
+        $namepred= "Статус МЕХАНИК на 90 дней";
+        $command_shop = $_GET['atribut'];
+        $sth_balance = $pdo->prepare('Select * FROM `shop_items` WHERE  id= ?');
+		    $sth_balance->execute(array("$atr_id_by"));
+        $array_balans_trade = $sth_balance->fetch(PDO::FETCH_ASSOC);
+        $gpr=$array_balans_trade['priv'];
+        if( $array_balans_trade['valut'] == "GD")
+        {
+          if($array_balans_trade['prise']  <= $user_GD)
+          {
+            $user_GD = $user_GD - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `gold` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_GD","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно денег!<br> >Пополнить баланс<";
+          }
+        }
+        if( $array_balans_trade['valut'] == "LP")
+        {
+          if($array_balans_trade['prise']  <= $user_LP)
+          {
+            $user_LP = $user_LP - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `lp` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_LP","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно МОНЕТ УДАЧИ!<br> >ЗАРАБОТАЙТЕ!<";
+          }
+        }
+      }
+      if($_GET['atribut'] == 3)
+      {
+        $atr_id_by = $_GET['atribut'];
+        $namepred= "Статус МЕХАНИК навсегда!";
+        $command_shop = $_GET['atribut'];
+        $sth_balance = $pdo->prepare('Select * FROM `shop_items` WHERE  id= ?');
+		    $sth_balance->execute(array("$atr_id_by"));
+        $array_balans_trade = $sth_balance->fetch(PDO::FETCH_ASSOC);
+        $gpr=$array_balans_trade['priv'];
+        if( $array_balans_trade['valut'] == "GD")
+        {
+          if($array_balans_trade['prise']  <= $user_GD)
+          {
+            $user_GD = $user_GD - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `gold` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_GD","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно денег!<br> >Пополнить баланс<";
+          }
+        }
+        if( $array_balans_trade['valut'] == "LP")
+        {
+          if($array_balans_trade['prise']  <= $user_LP)
+          {
+            $user_LP = $user_LP - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `lp` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_LP","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно МОНЕТ УДАЧИ!<br> >ЗАРАБОТАЙТЕ!<";
+          }
+        }
+      }
+      if($_GET['atribut'] == 4)
+      {
+        $atr_id_by = $_GET['atribut'];
+        $namepred= "Статус МЕХАНИК на 30 дней";
+        $command_shop = $_GET['atribut'];
+        $sth_balance = $pdo->prepare('Select * FROM `shop_items` WHERE  id= ?');
+		    $sth_balance->execute(array("$atr_id_by"));
+        $array_balans_trade = $sth_balance->fetch(PDO::FETCH_ASSOC);
+        $gpr=$array_balans_trade['priv'];
+        if( $array_balans_trade['valut'] == "GD")
+        {
+          if($array_balans_trade['prise']  <= $user_GD)
+          {
+            $user_GD = $user_GD - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `gold` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_GD","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно денег!<br> >Пополнить баланс<";
+          }
+        }
+        if( $array_balans_trade['valut'] == "LP")
+        {
+          if($array_balans_trade['prise']  <= $user_LP)
+          {
+            $user_LP = $user_LP - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `lp` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_LP","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно МОНЕТ УДАЧИ!<br> >ЗАРАБОТАЙТЕ!<";
+          }
+        }
+      }
+      if($_GET['atribut'] == 5)
+      {
+        $atr_id_by = $_GET['atribut'];
+        $namepred= "Статус МЕХАНИК на 90 дней";
+        $command_shop = $_GET['atribut'];
+        $sth_balance = $pdo->prepare('Select * FROM `shop_items` WHERE  id= ?');
+		    $sth_balance->execute(array("$atr_id_by"));
+        $array_balans_trade = $sth_balance->fetch(PDO::FETCH_ASSOC);
+        $gpr=$array_balans_trade['priv'];
+        if( $array_balans_trade['valut'] == "GD")
+        {
+          if($array_balans_trade['prise']  <= $user_GD)
+          {
+            $user_GD = $user_GD - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `gold` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_GD","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно денег!<br> >Пополнить баланс<";
+          }
+        }
+        if( $array_balans_trade['valut'] == "LP")
+        {
+          if($array_balans_trade['prise']  <= $user_LP)
+          {
+            $user_LP = $user_LP - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `lp` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_LP","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно МОНЕТ УДАЧИ!<br> >ЗАРАБОТАЙТЕ!<";
+          }
+        }
+      }
+      if($_GET['atribut'] == 6)
+      {
+        $atr_id_by = $_GET['atribut'];
+        $namepred= "Статус ИНЖЕНЕР на 30 дней";
+        $command_shop = $_GET['atribut'];
+        $sth_balance = $pdo->prepare('Select * FROM `shop_items` WHERE  id= ?');
+		    $sth_balance->execute(array("$atr_id_by"));
+        $array_balans_trade = $sth_balance->fetch(PDO::FETCH_ASSOC);
+        $gpr=$array_balans_trade['priv'];
+        if( $array_balans_trade['valut'] == "GD")
+        {
+          if($array_balans_trade['prise']  <= $user_GD)
+          {
+            $user_GD = $user_GD - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `gold` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_GD","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно денег!<br> >Пополнить баланс<";
+          }
+        }
+        if( $array_balans_trade['valut'] == "LP")
+        {
+          if($array_balans_trade['prise']  <= $user_LP)
+          {
+            $user_LP = $user_LP - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `lp` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_LP","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно МОНЕТ УДАЧИ!<br> >ЗАРАБОТАЙТЕ!<";
+          }
+        }
+      }
+      if($_GET['atribut'] == 7)
+      {
+        $atr_id_by = $_GET['atribut'];
+        $namepred= "Статус ИНЖЕНЕР на 90 дней";
+        $command_shop = $_GET['atribut'];
+        $sth_balance = $pdo->prepare('Select * FROM `shop_items` WHERE  id= ?');
+		    $sth_balance->execute(array("$atr_id_by"));
+        $array_balans_trade = $sth_balance->fetch(PDO::FETCH_ASSOC);
+        $gpr=$array_balans_trade['priv'];
+        if( $array_balans_trade['valut'] == "GD")
+        {
+          if($array_balans_trade['prise']  <= $user_GD)
+          {
+            $user_GD = $user_GD - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `gold` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_GD","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно денег!<br> >Пополнить баланс<";
+          }
+        }
+        if( $array_balans_trade['valut'] == "LP")
+        {
+          if($array_balans_trade['prise']  <= $user_LP)
+          {
+            $user_LP = $user_LP - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `lp` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_LP","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно МОНЕТ УДАЧИ!<br> >ЗАРАБОТАЙТЕ!<";
+          }
+        }
+      }
+      if($_GET['atribut'] == 8)
+      {
+        $atr_id_by = $_GET['atribut'];
+        $namepred= "Статус ИНЖЕНЕР навсегда!";
+        $command_shop = $_GET['atribut'];
+        $sth_balance = $pdo->prepare('Select * FROM `shop_items` WHERE  id= ?');
+		    $sth_balance->execute(array("$atr_id_by"));
+        $array_balans_trade = $sth_balance->fetch(PDO::FETCH_ASSOC);
+        $gpr=$array_balans_trade['priv'];
+        if( $array_balans_trade['valut'] == "GD")
+        {
+          if($array_balans_trade['prise']  <= $user_GD)
+          {
+            $user_GD = $user_GD - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `gold` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_GD","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно денег!<br> >Пополнить баланс<";
+          }
+        }
+        if( $array_balans_trade['valut'] == "LP")
+        {
+          if($array_balans_trade['prise']  <= $user_LP)
+          {
+            $user_LP = $user_LP - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `lp` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_LP","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно МОНЕТ УДАЧИ!<br> >ЗАРАБОТАЙТЕ!<";
+          }
+        }
+      }
+      if($_GET['atribut'] == 9)
+      {
+        $atr_id_by = $_GET['atribut'];
+        $namepred= "Статус ИНЖЕНЕР на 30 дней";
+        $command_shop = $_GET['atribut'];
+        $sth_balance = $pdo->prepare('Select * FROM `shop_items` WHERE  id= ?');
+		    $sth_balance->execute(array("$atr_id_by"));
+        $array_balans_trade = $sth_balance->fetch(PDO::FETCH_ASSOC);
+        $gpr=$array_balans_trade['priv'];
+        if( $array_balans_trade['valut'] == "GD")
+        {
+          if($array_balans_trade['prise']  <= $user_GD)
+          {
+            $user_GD = $user_GD - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `gold` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_GD","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно денег!<br> >Пополнить баланс<";
+          }
+        }
+        if( $array_balans_trade['valut'] == "LP")
+        {
+          if($array_balans_trade['prise']  <= $user_LP)
+          {
+            $user_LP = $user_LP - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `lp` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_LP","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно МОНЕТ УДАЧИ!<br> >ЗАРАБОТАЙТЕ!<";
+          }
+        }
+      }
+      if($_GET['atribut'] == 10)
+      {
+        $atr_id_by = $_GET['atribut'];
+        $namepred= "Статус ИНЖЕНЕР на 90 дней";
+        $command_shop = $_GET['atribut'];
+        $sth_balance = $pdo->prepare('Select * FROM `shop_items` WHERE  id= ?');
+		    $sth_balance->execute(array("$atr_id_by"));
+        $array_balans_trade = $sth_balance->fetch(PDO::FETCH_ASSOC);
+        $gpr=$array_balans_trade['priv'];
+        if( $array_balans_trade['valut'] == "GD")
+        {
+          if($array_balans_trade['prise']  <= $user_GD)
+          {
+            $user_GD = $user_GD - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `gold` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_GD","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно денег!<br> >Пополнить баланс<";
+          }
+        }
+        if( $array_balans_trade['valut'] == "LP")
+        {
+          if($array_balans_trade['prise']  <= $user_LP)
+          {
+            $user_LP = $user_LP - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `lp` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_LP","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно МОНЕТ УДАЧИ!<br> >ЗАРАБОТАЙТЕ!<";
+          }
+        }
+      }
+
+      if($_GET['atribut'] == 11)
+      {
+        $atr_id_by = $_GET['atribut'];
+        $namepred= "Статус ИЛОН МАСК на 30 дней";
+        $command_shop = $_GET['atribut'];
+        $sth_balance = $pdo->prepare('Select * FROM `shop_items` WHERE  id= ?');
+		    $sth_balance->execute(array("$atr_id_by"));
+        $array_balans_trade = $sth_balance->fetch(PDO::FETCH_ASSOC);
+        $gpr=$array_balans_trade['priv'];
+        if( $array_balans_trade['valut'] == "GD")
+        {
+          if($array_balans_trade['prise']  <= $user_GD)
+          {
+            $user_GD = $user_GD - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `gold` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_GD","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно денег!<br> >Пополнить баланс<";
+          }
+        }
+        if( $array_balans_trade['valut'] == "LP")
+        {
+          if($array_balans_trade['prise']  <= $user_LP)
+          {
+            $user_LP = $user_LP - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `lp` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_LP","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно МОНЕТ УДАЧИ!<br> >ЗАРАБОТАЙТЕ!<";
+          }
+        }
+      }
+      if($_GET['atribut'] == 12)
+      {
+        $atr_id_by = $_GET['atribut'];
+        $namepred= "Статус ИЛОН МАСК на 90 дней";
+        $command_shop = $_GET['atribut'];
+        $sth_balance = $pdo->prepare('Select * FROM `shop_items` WHERE  id= ?');
+		    $sth_balance->execute(array("$atr_id_by"));
+        $array_balans_trade = $sth_balance->fetch(PDO::FETCH_ASSOC);
+        $gpr=$array_balans_trade['priv'];
+        if( $array_balans_trade['valut'] == "GD")
+        {
+          if($array_balans_trade['prise']  <= $user_GD)
+          {
+            $user_GD = $user_GD - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `gold` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_GD","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно денег!<br> >Пополнить баланс<";
+          }
+        }
+        if( $array_balans_trade['valut'] == "LP")
+        {
+          if($array_balans_trade['prise']  <= $user_LP)
+          {
+            $user_LP = $user_LP - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `lp` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_LP","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно МОНЕТ УДАЧИ!<br> >ЗАРАБОТАЙТЕ!<";
+          }
+        }
+      }
+      if($_GET['atribut'] == 13)
+      {
+        $atr_id_by = $_GET['atribut'];
+        $namepred= "Статус ИЛОН МАСК навсегда!";
+        $command_shop = $_GET['atribut'];
+        $sth_balance = $pdo->prepare('Select * FROM `shop_items` WHERE  id= ?');
+		    $sth_balance->execute(array("$atr_id_by"));
+        $array_balans_trade = $sth_balance->fetch(PDO::FETCH_ASSOC);
+        $gpr=$array_balans_trade['priv'];
+        if( $array_balans_trade['valut'] == "GD")
+        {
+          if($array_balans_trade['prise']  <= $user_GD)
+          {
+            $user_GD = $user_GD - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `gold` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_GD","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно денег!<br> >Пополнить баланс<";
+          }
+        }
+        if( $array_balans_trade['valut'] == "LP")
+        {
+          if($array_balans_trade['prise']  <= $user_LP)
+          {
+            $user_LP = $user_LP - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `lp` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_LP","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно МОНЕТ УДАЧИ!<br> >ЗАРАБОТАЙТЕ!<";
+          }
+        }
+      }
+      if($_GET['atribut'] == 14)
+      {
+        $atr_id_by = $_GET['atribut'];
+        $namepred= "Статус ИЛОН МАСК на 30 дней";
+        $command_shop = $_GET['atribut'];
+        $sth_balance = $pdo->prepare('Select * FROM `shop_items` WHERE  id= ?');
+		    $sth_balance->execute(array("$atr_id_by"));
+        $array_balans_trade = $sth_balance->fetch(PDO::FETCH_ASSOC);
+        $gpr=$array_balans_trade['priv'];
+        if( $array_balans_trade['valut'] == "GD")
+        {
+          if($array_balans_trade['prise']  <= $user_GD)
+          {
+            $user_GD = $user_GD - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `gold` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_GD","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно денег!<br> >Пополнить баланс<";
+          }
+        }
+        if( $array_balans_trade['valut'] == "LP")
+        {
+          if($array_balans_trade['prise']  <= $user_LP)
+          {
+            $user_LP = $user_LP - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `lp` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_LP","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно МОНЕТ УДАЧИ!<br> >ЗАРАБОТАЙТЕ!<";
+          }
+        }
+      }
+      if($_GET['atribut'] == 15)
+      {
+        $atr_id_by = $_GET['atribut'];
+        $namepred= "Статус ИЛОН МАСК на 90 дней";
+        $command_shop = $_GET['atribut'];
+        $sth_balance = $pdo->prepare('Select * FROM `shop_items` WHERE  id= ?');
+		    $sth_balance->execute(array("$atr_id_by"));
+        $array_balans_trade = $sth_balance->fetch(PDO::FETCH_ASSOC);
+        $gpr=$array_balans_trade['priv'];
+        if( $array_balans_trade['valut'] == "GD")
+        {
+          if($array_balans_trade['prise']  <= $user_GD)
+          {
+            $user_GD = $user_GD - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `gold` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_GD","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно денег!<br> >Пополнить баланс<";
+          }
+        }
+        if( $array_balans_trade['valut'] == "LP")
+        {
+          if($array_balans_trade['prise']  <= $user_LP)
+          {
+            $user_LP = $user_LP - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `lp` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_LP","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно МОНЕТ УДАЧИ!<br> >ЗАРАБОТАЙТЕ!<";
+          }
+        }
+      }
+      if($_GET['atribut'] == 16)
+      {
+        $atr_id_by = $_GET['atribut'];
+        $namepred= "Статус МЕЦЕНАТ на 30 дней";
+        $command_shop = $_GET['atribut'];
+        $sth_balance = $pdo->prepare('Select * FROM `shop_items` WHERE  id= ?');
+		    $sth_balance->execute(array("$atr_id_by"));
+        $array_balans_trade = $sth_balance->fetch(PDO::FETCH_ASSOC);
+        $gpr=$array_balans_trade['priv'];
+        if( $array_balans_trade['valut'] == "GD")
+        {
+          if($array_balans_trade['prise']  <= $user_GD)
+          {
+            $user_GD = $user_GD - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `gold` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_GD","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно денег!<br> >Пополнить баланс<";
+          }
+        }
+        if( $array_balans_trade['valut'] == "LP")
+        {
+          if($array_balans_trade['prise']  <= $user_LP)
+          {
+            $user_LP = $user_LP - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `lp` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_LP","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно МОНЕТ УДАЧИ!<br> >ЗАРАБОТАЙТЕ!<";
+          }
+        }
+      }
+      if($_GET['atribut'] == 17)
+      {
+        $atr_id_by = $_GET['atribut'];
+        $namepred= "Статус МЕЦЕНАТ на 90 дней";
+        $command_shop = $_GET['atribut'];
+        $sth_balance = $pdo->prepare('Select * FROM `shop_items` WHERE  id= ?');
+		    $sth_balance->execute(array("$atr_id_by"));
+        $array_balans_trade = $sth_balance->fetch(PDO::FETCH_ASSOC);
+        $gpr=$array_balans_trade['priv'];
+        if( $array_balans_trade['valut'] == "GD")
+        {
+          if($array_balans_trade['prise']  <= $user_GD)
+          {
+            $user_GD = $user_GD - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `gold` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_GD","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно денег!<br> >Пополнить баланс<";
+          }
+        }
+        if( $array_balans_trade['valut'] == "LP")
+        {
+          if($array_balans_trade['prise']  <= $user_LP)
+          {
+            $user_LP = $user_LP - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `lp` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_LP","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно МОНЕТ УДАЧИ!<br> >ЗАРАБОТАЙТЕ!<";
+          }
+        }
+      }
+      if($_GET['atribut'] == 18)
+      {
+        $atr_id_by = $_GET['atribut'];
+        $namepred= "Статус МЕЦЕНАТ навсегда!";
+        $command_shop = $_GET['atribut'];
+        $sth_balance = $pdo->prepare('Select * FROM `shop_items` WHERE  id= ?');
+		    $sth_balance->execute(array("$atr_id_by"));
+        $array_balans_trade = $sth_balance->fetch(PDO::FETCH_ASSOC);
+        $gpr=$array_balans_trade['priv'];
+        if( $array_balans_trade['valut'] == "GD")
+        {
+          if($array_balans_trade['prise']  <= $user_GD)
+          {
+            $user_GD = $user_GD - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `gold` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_GD","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно денег!<br> >Пополнить баланс<";
+          }
+        }
+        if( $array_balans_trade['valut'] == "LP")
+        {
+          if($array_balans_trade['prise']  <= $user_LP)
+          {
+            $user_LP = $user_LP - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `lp` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_LP","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно МОНЕТ УДАЧИ!<br> >ЗАРАБОТАЙТЕ!<";
+          }
+        }
+      }
+      if($_GET['atribut'] == 19)
+      {
+        $atr_id_by = $_GET['atribut'];
+        $namepred= "Статус МЕЦЕНАТ на 30 дней";
+        $command_shop = $_GET['atribut'];
+        $sth_balance = $pdo->prepare('Select * FROM `shop_items` WHERE  id= ?');
+		    $sth_balance->execute(array("$atr_id_by"));
+        $array_balans_trade = $sth_balance->fetch(PDO::FETCH_ASSOC);
+        $gpr=$array_balans_trade['priv'];
+        if( $array_balans_trade['valut'] == "GD")
+        {
+          if($array_balans_trade['prise']  <= $user_GD)
+          {
+            $user_GD = $user_GD - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `gold` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_GD","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно денег!<br> >Пополнить баланс<";
+          }
+        }
+        if( $array_balans_trade['valut'] == "LP")
+        {
+          if($array_balans_trade['prise']  <= $user_LP)
+          {
+            $user_LP = $user_LP - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `lp` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_LP","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно МОНЕТ УДАЧИ!<br> >ЗАРАБОТАЙТЕ!<";
+          }
+        }
+      }
+      if($_GET['atribut'] == 20)
+      {
+        $atr_id_by = $_GET['atribut'];
+        $namepred= "Статус МЕЦЕНАТ на 90 дней";
+        $command_shop = $_GET['atribut'];
+        $sth_balance = $pdo->prepare('Select * FROM `shop_items` WHERE  id= ?');
+		    $sth_balance->execute(array("$atr_id_by"));
+        $array_balans_trade = $sth_balance->fetch(PDO::FETCH_ASSOC);
+        $gpr=$array_balans_trade['priv'];
+        if( $array_balans_trade['valut'] == "GD")
+        {
+          if($array_balans_trade['prise']  <= $user_GD)
+          {
+            $user_GD = $user_GD - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `gold` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_GD","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно денег!<br> >Пополнить баланс<";
+          }
+        }
+        if( $array_balans_trade['valut'] == "LP")
+        {
+          if($array_balans_trade['prise']  <= $user_LP)
+          {
+            $user_LP = $user_LP - $array_balans_trade['prise'];
+            $sth_balance_minus = $pdo->prepare("UPDATE `balance` SET `lp` = ? WHERE `iduser` = ?");
+            $sth_balance_minus->execute(array("$user_LP","$iduser"));
+            //добавление привелегии в инвентарь
+            //lp user/group <user|group> parent addtemp <group> <duration>
+            
+            $sth_add_inv = $pdo->prepare('INSERT INTO `inventar` (`server`, username, `comand`,`status`,`namepred`)
+            VALUES (?, ?, ?, ?, ?)');
+
+            $sth_add_inv->execute(array(
+              "tehnopvp",
+              "$iduser",
+              "$command_shop",
+              "1",
+              "$namepred"
+            ));
+
+            $sms ="Вы купили \"".$namepred."\" Активируйте в личном кабинете -> сумка";
+          }
+          else
+          {
+            $sms = "Недостаточно МОНЕТ УДАЧИ!<br> >ЗАРАБОТАЙТЕ!<";
+          }
+        }
+      }
+    }
+  
+
+  }
 }
 else
 {

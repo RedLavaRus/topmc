@@ -7,15 +7,15 @@
 				</div>
 				<h3>СТРИМЕРЫ НА ПРОЕКТЕ</h3>
 				<div class="stream_box">
+					<iframe width="340" height="200" src="https://player.twitch.tv/?channel=happydies&enableExtensions=true&muted=false&player=popout&volume=0.5" frameborder="0" allowfullscreen>
+					</iframe>
+				</div>
+				<div class="stream_box">
 					<iframe width="340" height="200" src="https://player.twitch.tv/?channel=fr1zz_tv&enableExtensions=true&muted=false&player=popout&volume=0.5" frameborder="0" allowfullscreen>
 					</iframe>
 				</div>
 				<div class="stream_box">
-					<iframe width="340" height="200" src="https://www.youtube.com/embed/dHhKIs1LXJ0&autoplay=1" frameborder="0" allowfullscreen>
-					</iframe>
-				</div>
-				<div class="stream_box">
-					<iframe width="340" height="200" src="https://www.youtube.com/embed/dHhKIs1LXJ0&autoplay=1" frameborder="0" allowfullscreen>
+					<iframe width="340" height="200" src="https://www.youtube.com/embed/1ckbPf7RIDI" frameborder="0" allowfullscreen>
 					</iframe>
 				</div>
 				<div class="stream_box">
@@ -29,3 +29,5 @@
 					?>
 				<br><br>
 			</div>
+
+			

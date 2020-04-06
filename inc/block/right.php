@@ -57,4 +57,6 @@ $("#show_online").html(data);
 						$ivent-> right_bar($pdo);
 					?>
 				
+				<div class="clear"></div>
 				</div>
+				<div class="clear"></div>

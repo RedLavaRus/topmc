@@ -12,3 +12,4 @@ class Cfg
 $cfg = new Cfg;
 
 ?>
+
